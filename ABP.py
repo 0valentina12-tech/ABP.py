@@ -11,8 +11,6 @@ import math
 import os
 import tempfile
 from fpdf import FPDF
-import qrcode
-
 
 # --- CONFIGURACIÓN DE LA INTERFAZ ---
 st.set_page_config(page_title="CivilCAD AI - Simulador Vial", layout="wide")
@@ -686,16 +684,3 @@ if df is not None:
                     file_name=f"Memoria_Calculo_{nombre_proyecto.replace(' ', '_')}.pdf",
                     mime="application/pdf"
                 )
-                st.markdown("### Generador de Código QR")
-                texto_qr = st.text_input("Ingresa el enlace, dato o texto que quieres convertir a QR:")
-
-                if st.button("Generar QR"):
-                    if texto_qr:
-                        # Crea la imagen del código QR
-                        imagen_qr = qrcode.make(texto_qr)
-
-                        # Extrae la imagen en formato compatible y la muestra en la app
-                        st.image(imagen_qr.get_image(), caption="Tu Código QR listo para escanear")
-                    else:
-                        st.warning("Por favor, escribe un dato válido para poder generar el código.")
-                        
