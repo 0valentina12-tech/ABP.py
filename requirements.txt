@@ -1,0 +1,13 @@
+pandas
+numpy
+streamlit
+matplotlib.pyplot
+pandas
+plotly.graph_objects
+scipy.spatial
+scipy.spatial.distance
+scipy.interpolate
+sqlite3
+math
+tempfile
+fpdf
