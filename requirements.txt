@@ -4,4 +4,4 @@ numpy
 plotly
 matplotlib
 scipy
-fpdf
+fpdf2
